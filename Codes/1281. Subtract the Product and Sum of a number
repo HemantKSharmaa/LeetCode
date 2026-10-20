@@ -1,0 +1,27 @@
+class Solution {
+    public int subtractProductAndSum(int n) {
+        int subtract = Prod(n) - Sum(n);
+        return subtract;
+    }
+    static int Sum(int n){
+        int sum = 0;
+        while(n!=0){
+            int digit = n % 10;
+            n = n / 10;
+            sum = sum+digit;
+        }
+
+        return sum;
+    }
+    static int Prod(int n){
+
+        int prod =1;
+        while(n!=0){
+            int digit = n % 10;
+            n = n / 10;
+            prod = prod*digit;
+        }
+
+        return prod;
+    }
+}
